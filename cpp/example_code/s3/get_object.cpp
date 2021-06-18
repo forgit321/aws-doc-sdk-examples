@@ -74,12 +74,12 @@ int main()
     Aws::InitAPI(options);
     {
         //TODO: Name of a bucket in your account.
-        const Aws::String bucket_name = "DOC-EXAMPLE-BUCKET";
+        const Aws::String bucket_name = "samplbucket";
         //TODO: The bucket "DOC-EXAMPLE-BUCKET" must have been created and previously loaded with "my-file.txt". 
         //See create_bucket.cpp and put_object.cpp to create a bucket and load an object into that bucket.
-        const Aws::String object_name = "my-file.txt";
+        const Aws::String object_name = "file.csv";
         //TODO: Set to the region in which the bucket was created.
-        const Aws::String region = "us-east-1";
+        const Aws::String region = "us-east-2";
 
         if (!AwsDoc::S3::GetObject(object_name, bucket_name, region))
         {
